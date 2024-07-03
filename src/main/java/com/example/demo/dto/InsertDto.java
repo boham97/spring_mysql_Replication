@@ -6,4 +6,5 @@ import lombok.Data;
 public class InsertDto {
     private String username;
     private String email;
+
 }

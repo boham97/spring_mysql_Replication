@@ -1,5 +1,7 @@
-package com.example.demo;
+package com.example.demo.controller;
 
+import com.example.demo.domain.User;
+import com.example.demo.service.UserService;
 import com.example.demo.dto.InsertDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

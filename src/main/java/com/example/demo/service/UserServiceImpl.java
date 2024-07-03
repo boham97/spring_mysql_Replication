@@ -1,5 +1,7 @@
-package com.example.demo;
+package com.example.demo.service;
 
+import com.example.demo.repository.UserRepository;
+import com.example.demo.domain.User;
 import com.example.demo.dto.InsertDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -12,10 +14,7 @@ public class UserServiceImpl implements UserService {
     @Transactional
     @Override
     public User isnert(InsertDto insertDto) {
-        User user = User.builder()
-                .username(insertDto.getUsername())
-                .email(insertDto.getEmail())
-                .build();
+        User user = User.toEntity(insertDto);
         repository.save(user);
         return user;
     }
